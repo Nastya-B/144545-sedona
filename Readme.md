@@ -1,7 +1,7 @@
-# Личный проект «Седона»
+﻿# Личный проект «Седона»
 
 * Студент: [Anastasia Borodulina](https://htmlacademy.ru/profile/id144545).
-* Наставник: `Неизвестно`.
+* Наставник: [Андрей Серёдкин](https://htmlacademy.ru/profile/midler).
 
 ---
 

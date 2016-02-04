@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="top-menu">
+        <ul>
+          <li><a href="#">Информация</a></li>
+          <li><a href="#">Фото и видео</a></li>
+          <li><a href="#">Карта штата</a></li>
+          <li><a href="#">Гостиницы</a></li>
+        </ul>
+      </nav>
+         <a href="#"><img class="top-menu-logo" src="http://placehold.it/67x56" alt="" /></a>
+    </header>
+
+    <div class="filter">
+      <form class="facilities" name="facilities" action="index.html">
+        <fieldset>
+          <legend>Инфраструктура:</legend>
+          <label>Бассейн<input type="checkbox" name="pool" checked></label>
+          <label>Парковка<input type="checkbox" name="parking"></label>
+          <label>Wi-Fi<input type="checkbox" name="wifi"></label>
+        </fieldset>
+        <fieldset>
+          <legend>Тип жилья:</legend>
+          <label>Гостиница<input type="checkbox" name="hotel" checked></label>
+          <label>Мотель<input type="checkbox" name="motel" checked></label>
+          <label>Апартаменты<input type="checkbox" name="apartments" checked></label>
+        </fieldset>
+      </form>
+
+      <form class="filter-by-price" action="index.html">
+        <fieldset>
+          <legend>Стоимость в сутки (р)</legend>
+            <div class="price-limit">
+              <p> от 0 </p>
+              <p> до 3000 </p>
+            </div>
+            <div class="slider minimum">            </div>
+            <div class="slider maximum">            </div>
+            <input type="submit" value="Отправить">
+        </fieldset>
+      </form>
+    </div>
+
+    <div class="sorting-block">
+      <div class="number-of-results">
+        Найдено: 3
+      </div>
+      <div class="sort-by">
+        <p>
+          сортировка:
+        </p>
+        <a href="#" class="sorting active">По цене</a>
+        <a href="#" class="sorting">По типу</a>
+        <a href="#" class="sorting">По рейтингу</a>
+      </div>
+      <div class="sorting A-Z">
+        <span class="ascending">&#9650</span>
+        <a href="#">
+          <span class="descending">&#9660</span>
+        </a>
+      </div>
+      </div>
+
+    <div class="hotel-preview">
+      <img src="https://placehold.it/150x100" alt="" />
+      <p class="hotel-name">
+        Amara Resort & Spa
+      </p>
+      <p class="hotel-type">
+        Гостиница
+      </p>
+      <p class="hotel-price">
+        от 3500 р.
+      </p>
+      <span class="star-rating">&#9733 &#9733 &#9733 &#9733</span>
+      <p class="number-rating">
+        Рейтинг: 8,5
+      </p>
+      <a href="#" class="button details">Подробнее</a>
+      <a href="#" class="button book">Забронировать</a>
+    </div>
+
+    <div class="hotel-preview">
+      <img src="https://placehold.it/150x100" alt="" />
+      <p class="hotel-name">
+        Desert Quail Inn
+      </p>
+      <p class="hotel-type">
+        Мотель
+      </p>
+      <p class="hotel-price">
+        от 2000 р.
+      </p>
+      <span class="star-rating">&#9733 &#9733</span>
+      <p class="number-rating">
+        Рейтинг: 8,9
+      </p>
+      <a href="#" class="button details">Подробнее</a>
+      <a href="#" class="button book">Забронировать</a>
+
+    </div>
+
+    <div class="hotel-preview">
+      <img src="https://placehold.it/150x100" alt="" />
+      <p class="hotel-name">
+        Villas at Poco Diablo
+      </p>
+      <p class="hotel-type">
+        Апартаменты
+      </p>
+      <p class="hotel-price">
+        от 4000 р.
+      </p>
+      <span class="star-rating">&#9733 &#9733 &#9733</span>
+      <p class="number-rating">
+        Рейтинг: 9,2
+      </p>
+      <a href="#" class="button details">Подробнее</a>
+      <a href="#" class="button book">Забронировать</a>
+
+    </div>
+
+    <footer>
+      <p class="hashtag">#VISITSEDONA</p>
+      <div class="social">
+        <ul>
+          <li class="twitter">
+            <a href="#">twitter</a>
+          </li>
+          <li class="facebook">
+            <a href="#">facebook</a>
+          </li>
+          <li class="youtube">
+            <a href="#">youtube</a>
+          </li>
+        </ul>
+      </div>
+      <div class="copyright">
+        <a href="#"><img src="http://placehold.it/280x120" alt="" /></a>
+      </div>
+    </footer>
+
+  </body>
+</html>

@@ -1,0 +1,23 @@
+body {
+  font-family: "PTSans";
+  text-transform: uppercase;
+}
+.top-menu {
+  font-weight: bold;
+  color: #000000;
+  line-height: 1.857;
+  font-size: 14px;
+}
+
+.hotel-name {
+  color: #000000;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 26px;
+}
+
+.book {
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 21px;
+}

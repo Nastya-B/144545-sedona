@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css\style.css">
     <title>HTML Academy: Седона</title>
   </head>
   <body>
@@ -14,27 +15,25 @@
           <li><a href="#">Гостиницы</a></li>
         </ul>
       </nav>
-         <a href="#"><img class="top-menu-logo" src="http://placehold.it/67x56" alt="" /></a>
+         <a class="top-menu-logo" href="#"><img src="img\sedona-logo.png" alt="" /></a>
     </header>
 
-    <div class="filter">
-      <form class="facilities" name="facilities" action="index.html">
-        <fieldset>
+      <form class="filter" name="filter" action="index.html">
+        <fieldset class="facilities">
           <legend>Инфраструктура:</legend>
           <label>Бассейн<input type="checkbox" name="pool" checked></label>
           <label>Парковка<input type="checkbox" name="parking"></label>
           <label>Wi-Fi<input type="checkbox" name="wifi"></label>
         </fieldset>
-        <fieldset>
+
+        <fieldset class="type">
           <legend>Тип жилья:</legend>
           <label>Гостиница<input type="checkbox" name="hotel" checked></label>
           <label>Мотель<input type="checkbox" name="motel" checked></label>
           <label>Апартаменты<input type="checkbox" name="apartments" checked></label>
         </fieldset>
-      </form>
 
-      <form class="filter-by-price" action="index.html">
-        <fieldset>
+        <fieldset class="price">
           <legend>Стоимость в сутки (р)</legend>
             <div class="price-limit">
               <p> от 0 </p>
@@ -42,10 +41,10 @@
             </div>
             <div class="slider minimum">            </div>
             <div class="slider maximum">            </div>
-            <input type="submit" value="Отправить">
-        </fieldset>
+          </fieldset>
+
+          <input type="submit" value="Показать">
       </form>
-    </div>
 
     <div class="sorting-block">
       <div class="number-of-results">
@@ -59,71 +58,86 @@
         <a href="#" class="sorting">По типу</a>
         <a href="#" class="sorting">По рейтингу</a>
       </div>
-      <div class="sorting A-Z">
-        <span class="ascending">&#9650</span>
-        <a href="#">
-          <span class="descending">&#9660</span>
-        </a>
+      <div class="sorting-arrows">
+          <span class="arrow active">&#9650</span>
+          <a href="#" class="arrow">&#9660</a>
       </div>
-      </div>
-
-    <div class="hotel-preview">
-      <img src="https://placehold.it/150x100" alt="" />
-      <p class="hotel-name">
-        Amara Resort & Spa
-      </p>
-      <p class="hotel-type">
-        Гостиница
-      </p>
-      <p class="hotel-price">
-        от 3500 р.
-      </p>
-      <span class="star-rating">&#9733 &#9733 &#9733 &#9733</span>
-      <p class="number-rating">
-        Рейтинг: 8,5
-      </p>
-      <a href="#" class="button details">Подробнее</a>
-      <a href="#" class="button book">Забронировать</a>
     </div>
 
-    <div class="hotel-preview">
-      <img src="https://placehold.it/150x100" alt="" />
-      <p class="hotel-name">
-        Desert Quail Inn
-      </p>
-      <p class="hotel-type">
-        Мотель
-      </p>
-      <p class="hotel-price">
-        от 2000 р.
-      </p>
-      <span class="star-rating">&#9733 &#9733</span>
-      <p class="number-rating">
-        Рейтинг: 8,9
-      </p>
-      <a href="#" class="button details">Подробнее</a>
-      <a href="#" class="button book">Забронировать</a>
+    <div class="search-result">
+      <div class="photo">
+        <img src="img\amara.png" alt="Amara Resort & Spa" />
+      </div>
+      <div class="info">
+        <p class="hotel-name">
+          Amara Resort & Spa
+        </p>
+        <p class="hotel-type">
+          Гостиница
+        </p>
+        <p class="hotel-price">
+          от 3500 р.
+        </p>
+        <a href="#" class="button details">Подробнее</a>
+        <a href="#" class="button book">Забронировать</a>
+      </div>
 
+      <div class="rating">
+        <span class="star">&#9733 &#9733 &#9733 &#9733</span>
+        <p class="number">
+          Рейтинг: 8,5
+        </p>
+      </div>
     </div>
 
-    <div class="hotel-preview">
-      <img src="https://placehold.it/150x100" alt="" />
-      <p class="hotel-name">
-        Villas at Poco Diablo
-      </p>
-      <p class="hotel-type">
-        Апартаменты
-      </p>
-      <p class="hotel-price">
-        от 4000 р.
-      </p>
-      <span class="star-rating">&#9733 &#9733 &#9733</span>
-      <p class="number-rating">
-        Рейтинг: 9,2
-      </p>
-      <a href="#" class="button details">Подробнее</a>
-      <a href="#" class="button book">Забронировать</a>
+    <div class="search-result">
+      <div class="photo">
+        <img src="img\desert-quail.jpg" alt="Desert Quail Inn" />
+      </div>
+      <div class="info">
+        <p class="hotel-name">
+          Desert Quail Inn
+        </p>
+        <p class="hotel-type">
+          Мотель
+        </p>
+        <p class="hotel-price">
+          от 2000 р.
+        </p>
+        <a href="#" class="button details">Подробнее</a>
+        <a href="#" class="button book">Забронировать</a>
+      </div>
+      <div class="rating">
+        <span class="star">&#9733 &#9733</span>
+        <p class="number">
+          Рейтинг: 8,9
+        </p>
+      </div>
+    </div>
 
+    <div class="search-result">
+      <div class="photo">
+        <img src="img\villas-at-poco-diablo.jpg" alt="Villas at Poco Diablo" />
+      </div>
+      <div class="info">
+        <p class="hotel-name">
+          Villas at Poco Diablo
+        </p>
+        <p class="hotel-type">
+          Апартаменты
+        </p>
+        <p class="hotel-price">
+          от 4000 р.
+        </p>
+        <a href="#" class="button details">Подробнее</a>
+        <a href="#" class="button book">Забронировать</a>
+      </div>
+      <div class="rating">
+        <span class="star">&#9733 &#9733 &#9733</span>
+        <p class="number">
+          Рейтинг: 9,2
+        </p>
+      </div>
     </div>
 
     <footer>
@@ -142,7 +156,7 @@
         </ul>
       </div>
       <div class="copyright">
-        <a href="#"><img src="http://placehold.it/280x120" alt="" /></a>
+        <a href="#"><img src="img\ha-logo.png" alt="" /></a>
       </div>
     </footer>
 

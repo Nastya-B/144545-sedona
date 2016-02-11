@@ -17,3 +17,110 @@ h2 {
   line-height: 1.5;
   font-weight: normal;
 }
+.header {
+  outline: 2px solid #33fc04;
+  min-height: 55px;
+  padding: 0 6%;
+}
+.top-menu li {
+  outline: 1px solid #f80a15;
+  display:inline-block;
+  vertical-align: top;
+  height: 55px;
+  width: 20%;
+  padding-top: 20px;
+  line-height: 1.857;
+}
+.top-menu {
+  text-align: center;
+}
+.top-menu-logo {
+  display: inline-block;
+}
+.intro-block {
+  outline: 2px solid #f4fd02;
+  min-height: 510px;
+}
+.heading {
+  outline: 2px solid #03cfdc;
+  min-height: 200px;
+  text-align: center;
+  display: table;
+  width: 100%;
+  padding: 57px 0;
+  box-sizing: border-box;
+}
+.txt-img-block {
+  box-sizing: border-box;
+  min-height: 260px;
+  display: table;
+}
+.text-box {
+  outline: 1px solid #fc8f01;
+  width: 33%;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0 5%;
+
+}
+.benefit-img {
+  height: 260px;
+  overflow: hidden;
+}
+.text-only-block {
+  outline: 1px solid #9b028b;
+  height: 260px;
+  width: 33%;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  box-sizing: border-box;
+  padding: 0 5%;
+  hyphens: auto;
+  /*как лучше сделать переносы слов?*/
+}
+.txt-icon-block {
+  outline: 1px solid #9b028b;
+  height: 330px;
+  width: 33%;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  box-sizing: border-box;
+  padding: 0 7%;
+  }
+.search-form-title {
+  outline: 2px dashed #12009b;
+  height: 290px;
+}
+.search-form-layout {
+  outline: 1px solid #c201b2;
+  height:480px;
+}
+
+.search-form-button{
+  outline: 2px dotted #dfe705;
+  width: 570px;
+}
+.search-form {
+  outline: 1px solid #dfe705;
+  height:400px;
+  width: 570px;
+}
+footer {
+  height: 120px;
+  box-sizing: border-box;
+}
+footer::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.column-left, .social, .copyright {
+  outline: 1px solid #fc8f01;
+  width: 33%;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+}

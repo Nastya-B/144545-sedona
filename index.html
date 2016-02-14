@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="css\normalize.css">
-  <link rel="stylesheet" href="css\style.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
   <title>HTML Academy: Седона</title>
 </head>
 
@@ -20,11 +20,11 @@
         <li><a href="#">Гостиницы</a></li>
       </ul>
     </nav>
-    <a href="#"><img class="top-menu-logo" src="img\sedona-logo.png" alt="" /></a>
+    <a href="#"><img class="top-menu-logo" src="img/sedona-logo.png" alt="" /></a>
   </header>
 
     <div class="intro-block">
-      <img class="intro-text" src="img\welcome-text.png">
+      <img class="intro-text" src="img/welcome-text.png">
     </img>
     </div>
     <div class="heading">
@@ -40,7 +40,7 @@
          <p>Седона &mdash; не аттракцион для туристов, там течет своя жизнь</p>
       </div>
       <div class="benefit-img">
-        <img src="img\city-view.jpg" alt="вид Седоны" />
+        <img src="img/city-view.jpg" alt="вид Седоны" />
       </div>
     </div>
 
@@ -73,7 +73,7 @@
 
     <div class="txt-img-block">
       <div class="benefit-img">
-        <img src="img\devils-bridge.jpg" alt="Мост Дьявола" />
+        <img src="img/devils-bridge.jpg" alt="Мост Дьявола" />
       </div>
       <div class="text-box">
         <p class="title">Там есть мост дьявола</p>
@@ -110,24 +110,36 @@
         <div class="search-form">
           <form  action="#" method="get">
             <div class="in">
-              <label>Дата заезда:
-                <input type="text" name="check-in" value="24 апреля 2016">
-              </label>
+              <div class="text">
+                <label for="in">Дата заезда:</label>
+              </div>
+              <div class="frame">
+                <input id="in" type="text" name="check-in" value="24 апреля 2016">
+              </div>
             </div>
             <div class="out">
-              <label>Дата выезда:
-                <input type="text" name="check-out" value="4 июля 2016">
-              </label>
+              <div class="text">
+                <label for="out">Дата выезда:</label>
+              </div>
+              <div class="frame">
+                <input id="out" type="text" name="check-out" value="4 июля 2016">
+              </div>
             </div>
             <div class="adults">
-              <label>Взрослые:
-                <input class="adults" type="text" name="adults" value="2">
-              </label>
+              <div class="text">
+                  <label for="adults">Взрослые:</label>
+              </div>
+              <div class="frame">
+                <input id="adults" type="text" name="adults" value="2">
+              </div>
             </div>
             <div class="kids">
-              <label>Дети:
-                <input type="text" name="kids" value="0">
-              </label>
+              <div class="text">
+                <label for="kids">Дети:  </label>
+              </div>
+              <div class="frame">
+                <input id="kids" type="text" name="kids" value="0">
+              </div>
             </div>
             <input type="submit" value="Найти">
           </form>
@@ -147,7 +159,7 @@
         </div>
         <div class="copyright">
           <span>Website by</span>
-          <a href="#"><img src="img\ha-logo.png" alt="" /></a>
+          <a href="#"><img src="img/ha-logo.png" alt="" /></a>
         </div>
       </div>
     </footer>

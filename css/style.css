@@ -72,6 +72,7 @@ p {
   margin: 0 auto;
   max-width: 1200px;
   min-width: 768px;
+  position: relative;
 }
 
 .header {
@@ -130,24 +131,16 @@ p {
   position: relative;
   z-index: 1;
 }
-/*.intro-block::after {
-  content: url("../img/shape.png");
+.intro-block::after {
+  display: block;
+  content: "";
   position: absolute;
   bottom: 0;
-
-  width: auto;
-}*/
-/*.intro-block::after {
-content: "";
-display:block
-position: absolute;
-bottom: 0;
-width: 100%;
-left: 0;
-height: 30px;
-background: url("../img/shape.png") no-repeat center transparent;
-}*/
-
+  left: 0;
+  width: 100%;
+  height: 57px;
+  background: url("../img/shape.png") no-repeat center transparent;
+}
 .intro-text {
   margin: 75px auto;
   display: block;
@@ -188,6 +181,7 @@ background: url("../img/shape.png") no-repeat center transparent;
   box-sizing: border-box;
   background: #81b3d2;
   color: #ffffff;
+  padding: 0 15px;
 }
 .text-box .title {
   width: 200px;
@@ -266,11 +260,7 @@ background: url("../img/shape.png") no-repeat center transparent;
   background: url("../img/icon-souvenir.png") no-repeat center top 60px;
 }
 
-.search-form-title {
-  min-height: 290px;
-  /*padding: 30px 20% 0 20%;*/
 
-}
 .search-form-title .title {
   font-size: 30px;
   font-weight: bold;
@@ -307,7 +297,7 @@ background: url("../img/shape.png") no-repeat center transparent;
 }
 
 .search-form-layout {
-  min-height:475px;
+  min-height:595px;
   background: url("../img/map.jpg");
   position: relative;
 }
@@ -325,6 +315,7 @@ background: url("../img/shape.png") no-repeat center transparent;
   content: "";
   display: table;
   clear: both;
+  font-size: 0;
 }
 .search-form label {
   font-size: 14px;
@@ -339,8 +330,8 @@ input[type=submit] {
   line-height: 26px;
   text-transform: uppercase;
   background-color: #81b3d2;
-  /*vertical-align: bottom;
-  display: block;*/
+  margin-top: 60px;
+  border-style: none;
 }
 input[type=text] {
   border-style: none;
@@ -373,7 +364,6 @@ input[type=text] {
 .adults .frame,
 .kids .frame {
   width: 115px;
-  margin-bottom: 29px;
   background-color: #f2f2f2;
   height: 38px;
   float: left;
@@ -381,36 +371,39 @@ input[type=text] {
   font-size: 14px;
   font-weight: bold;
   color: #000000;
-  padding: 13px;
+  padding: 13px 9px;
   vertical-align: middle;
+}
+.icon-calendar {
+  display: block;
+  float: right;
+  text-align: right;
 }
 .adults input,
 .kids input {
-  max-width: 89px;
+  max-width: 48px;
   text-align: center;
-
 }
 .kids .text {
   padding-right: 30px;
   text-align: right;
 }
-
 .main-footer {
+  width: 100%;
   min-height: 120px;
   box-sizing: border-box;
   font-size: 0;
   padding-top: 35px;
-  position: relative;
-  top: -120px;
-  background: rgba(225, 225, 225, 0.7)
-
+  position: absolute;
+  bottom: 120px;
+  background: rgba(225, 225, 225, 0.7);
 }
-
 .main-footer::after {
   content: "";
-  display: table;
+  display: block;;
   clear: both;
 }
+
 .hashtag, .social, .copyright {
   width: 33.33%;
   text-align: center;
@@ -418,14 +411,15 @@ input[type=text] {
   margin: auto 0;
   float: left;
 }
-.hashtag {
+.hashtag p {
   font-size: 21px;
   font-weight: bold;
 }
 .copyright span {
   display: inline-block;
-  padding: 15px;
+  padding: 12px;
   font-size: 14px;
+  vertical-align: top;
 }
 .copyright a:hover {
   content: url("../img/logo-hover.png");

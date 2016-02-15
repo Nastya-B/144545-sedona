@@ -309,6 +309,7 @@ background: url("../img/shape.png") no-repeat center transparent;
 .search-form-layout {
   min-height:475px;
   background: url("../img/map.jpg");
+  position: relative;
 }
 
 .search-form {
@@ -398,6 +399,11 @@ input[type=text] {
   min-height: 120px;
   box-sizing: border-box;
   font-size: 0;
+  padding-top: 35px;
+  position: relative;
+  top: -120px;
+  background: rgba(225, 225, 225, 0.7)
+
 }
 
 .main-footer::after {
@@ -407,10 +413,10 @@ input[type=text] {
 }
 .hashtag, .social, .copyright {
   width: 33.33%;
-  display: inline-block;
   text-align: center;
   vertical-align: middle;
-  font-size: 14px;
+  margin: auto 0;
+  float: left;
 }
 .hashtag {
   font-size: 21px;
@@ -418,7 +424,8 @@ input[type=text] {
 }
 .copyright span {
   display: inline-block;
-  padding: auto 0;
+  padding: 15px;
+  font-size: 14px;
 }
 .copyright a:hover {
   content: url("../img/logo-hover.png");

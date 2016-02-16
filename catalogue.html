@@ -20,33 +20,39 @@
       </nav>
       <a href="#"><img class="top-menu-logo" src="img\sedona-logo.png" alt="" /></a>
     </header>
+      <div class="filter-layout">
+        <form class="filter" name="filter" action="index.html">
+          <div class="facilities">
+            <fieldset>
+              <legend>Инфраструктура:</legend>
+              <label>Бассейн<input type="checkbox" name="pool" checked></label>
+              <label>Парковка<input type="checkbox" name="parking"></label>
+              <label>Wi-Fi<input type="checkbox" name="wifi"></label>
+            </fieldset>
+          </div>
+          <div class="type">
+            <fieldset>
+              <legend>Тип жилья:</legend>
+              <label>Гостиница<input type="checkbox" name="hotel" checked></label>
+              <label>Мотель<input type="checkbox" name="motel" checked></label>
+              <label>Апартаменты<input type="checkbox" name="apartments" checked></label>
+            </fieldset>
+          </div>
+          <div class="price">
+            <fieldset>
+              <legend>Стоимость в сутки (р)</legend>
+                <div class="price-limit">
+                  <p> от 0 </p>
+                  <p> до 3000 </p>
+                </div>
+                <div class="slider minimum">            </div>
+                <div class="slider maximum">            </div>
+                <input type="submit" value="Показать">
+              </fieldset>
+          </div>
+        </form>
+      </div>
 
-      <form class="filter" name="filter" action="index.html">
-        <fieldset class="facilities">
-          <legend>Инфраструктура:</legend>
-          <label>Бассейн<input type="checkbox" name="pool" checked></label>
-          <label>Парковка<input type="checkbox" name="parking"></label>
-          <label>Wi-Fi<input type="checkbox" name="wifi"></label>
-        </fieldset>
-
-        <fieldset class="type">
-          <legend>Тип жилья:</legend>
-          <label>Гостиница<input type="checkbox" name="hotel" checked></label>
-          <label>Мотель<input type="checkbox" name="motel" checked></label>
-          <label>Апартаменты<input type="checkbox" name="apartments" checked></label>
-        </fieldset>
-
-        <fieldset class="price">
-          <legend>Стоимость в сутки (р)</legend>
-            <div class="price-limit">
-              <p> от 0 </p>
-              <p> до 3000 </p>
-            </div>
-            <div class="slider minimum">            </div>
-            <div class="slider maximum">            </div>
-            <input type="submit" value="Показать">
-          </fieldset>
-      </form>
 
     <div class="sorting-block">
       <div class="found">

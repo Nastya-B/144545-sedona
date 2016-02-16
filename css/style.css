@@ -122,7 +122,17 @@ p {
 }
 .top-menu a:disabled {
   color: #b2b2b2;
-  }
+}
+.top-menu a:active {
+  color: #766357;
+}
+.top-menu a:active:hover {
+  color: #604e43;
+}
+.top-menu a:active:disabled {
+  color: #d6d0cc;
+}
+
 
 .intro-block {
   min-height: 513px;
@@ -321,7 +331,18 @@ p {
   font-size: 14px;
   font-weight: bold;
 }
-input[type=submit] {
+
+input[type=text] {
+  border-style: none;
+  text-transform: uppercase;
+  background-color: transparent;
+
+}
+input[type=text]:focus {
+  outline: none;
+  background-color: transparent;
+}
+.index-search {
   width: 460px;
   height: 60px;
   color: #ffffff;
@@ -333,10 +354,11 @@ input[type=submit] {
   margin-top: 60px;
   border-style: none;
 }
-input[type=text] {
-  border-style: none;
-  background-color: #f2f2f2;
-  text-transform: uppercase;
+.index-search:hover {
+  background-color: #669ec0;
+}
+.index-search:disabled {
+  opacity: 30%;
 }
 .search-form .text {
   box-sizing: border-box;
@@ -374,6 +396,14 @@ input[type=text] {
   padding: 13px 9px;
   vertical-align: middle;
 }
+.frame:hover {
+  background-color: #ebebeb;
+}
+input[type=text]:focus .frame {
+  background-color: #ffffff;
+  border: 2px solid #e5e5e5;
+}
+
 .icon-calendar {
   display: block;
   float: right;
@@ -388,6 +418,23 @@ input[type=text] {
   padding-right: 30px;
   text-align: right;
 }
+
+.icon-plus,
+.icon-minus,
+.icon-calendar {
+  color: #a9a9a9;
+}
+.icon-plus,
+.icon-minus,
+.icon-calendar:hover {
+  color: #000000;
+}
+.icon-plus,
+.icon-minus,
+.icon-calendar:disabled {
+  color: #81b3d2;
+}
+
 .main-footer {
   width: 100%;
   min-height: 120px;
@@ -474,17 +521,16 @@ input[type=text] {
 
 /*стили для внутренней страницы*/
 
-.filter {
- padding: 25px 6%;
- min-height: 220px;
+.filter-layout {
+  background: #7a9ec2 url("../img/bg-filter-block.jpg") no-repeat center;
+  padding: 50px 6%;
+  min-height: 220px;
+
 }
-.filter::after {
+.filter-layout::after {
   content: "";
   display: table;
   clear: both;
-}
-.filter fieldset {
-  padding: 0;
 }
 .facilities, .type {
   float:left;
@@ -495,6 +541,58 @@ input[type=text] {
   float: right;
   width: 50%;
 }
+
+.filter fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+.filter legend {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+.filter label {
+  font-size: 14px;
+  font-weight: normal;
+  color: #ffffff;
+  margin-bottom: 30px;
+  margin-right: 0;
+  display: block;
+  width: 20%;
+  margin-left: 30px;
+}
+input[type="checkbox"] {
+  display: none;
+}
+input[type="checkbox"] + label {
+  display: block;
+  width: 20%
+  padding: 30px;
+  position: relative;
+}
+input[type="checkbox"] + label::before {
+  content: "/2610";
+  font-family: "symbols-sedona";
+  position: absolute;
+  font-size: 24px;
+  color: #ffffff;
+  top: 0;
+  left: 0;
+}
+
+input[type=checkbox]:checked + label::before {
+  content: "\2611";
+  font-family: "symbols-sedona";
+  position: absolute;
+  font-size: 24px;
+  color: #ffffff;
+  top: 0;
+  left: 0;
+}
+
+
 .sorting-block {
   min-height: 87px;
   padding: 0 6%;

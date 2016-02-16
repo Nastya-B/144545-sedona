@@ -25,9 +25,12 @@
           <div class="facilities">
             <fieldset>
               <legend>Инфраструктура:</legend>
-              <label>Бассейн<input type="checkbox" name="pool" checked></label>
-              <label>Парковка<input type="checkbox" name="parking"></label>
-              <label>Wi-Fi<input type="checkbox" name="wifi"></label>
+              <label for="pool">Бассейн</label>
+              <input id="pool" type="checkbox" name="pool" checked>
+              <label for="parking">Парковка</label>
+              <input id="parking" type="checkbox" name="parking">
+              <label for="wifi">Wi-Fi</label>
+              <input id="wifi" type="checkbox" name="wifi">
             </fieldset>
           </div>
           <div class="type">
@@ -59,14 +62,14 @@
         Найдено: 3
       </div>
       <div class="sort-by">
-          сортировка:
-        <a href="#" class="sorting active">По цене</a>
-        <a href="#" class="sorting">По типу</a>
-        <a href="#" class="sorting">По рейтингу</a>
+        <span>Сортировка:</span>
+        <a href="#" class="active">По цене</a>
+        <a href="#" class="down">По типу</a>
+        <a href="#" class="down">По рейтингу</a>
       </div>
       <div class="arrows">
-          <span class="arrow active">&#9650</span>
-          <a href="#" class="arrow">&#9660</a>
+          <span class="icon-up-dir"> </span>
+          <a href="#" class="icon-down-dir"> </a>
       </div>
     </div>
 

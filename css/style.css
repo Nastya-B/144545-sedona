@@ -1,19 +1,60 @@
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+
+  font-family: "symbols-sedona";
+  src: url("../fonts/symbols-sedona.woff") format("woff"),
+       url("../fonts/symbols-sedona.woff2") format("woff2");
+}
 body {
-  font-family: "PTSans", "Arial", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: normal;
   color: #000000;
   line-height: 1.2;
   font-size: 14px;
   text-transform: uppercase;
-  margin: 0;
-  }
-  @font-face {
-    font-weight: normal;
-    font-style: normal;
+  background-color: #f2f2f2;
+}
+h1 {
+  font-size: 21px;
+  line-height: 1.2;
+  font-weight: bold;
+}
 
-    font-family: "symbols-sedona";
-    src: url("../fonts/symbols-sedona.woff") format("woff"),
-         url("../fonts/symbols-sedona.woff2") format("woff2");
+h2 {
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: normal;
+}
+h3 {
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: normal;
+  text-decoration: underline;
+  }
+h4 {
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: bold;
+  text-decoration: underline;
+}
+h5 {
+  font-size: 12px;
+  line-height: 26px;
+  font-weight: normal;
+  font-style: italic;
+  text-decoration: underline;
+}
+h6 {
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: bold;
+  font-style: italic;
+}
+p {
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: normal;
   }
 
   [class^="icon-"]::before,
@@ -48,39 +89,34 @@ body {
   .icon-youtube::before { content: "\f39e"; } /* "" */
 
 
-h2 {
-  font-size: 14px;
-  line-height: 1.5;
-  font-weight: normal;
-}
-
-h1,
-.title {
-  font-size: 21px;
-  line-height: 26px;
-  font-weight: bold;
-  display: block;
-}
-p {
-  font-size: 14px;
-  line-height: 26px;
-  font-weight: normal;
-  display: block;
-  }
 
 .page-container {
   margin: 0 auto;
   max-width: 1200px;
   min-width: 768px;
   position: relative;
+  background-color: #ffffff;
+  box-shadow: 0 0 15px #000101;
+
+}
+h1,
+.title {
+  font-size: 21px;
+  line-height: 1.2;
+  font-weight: bold;
+  display: block;
 }
 
 .header {
-  min-height: 55px;
   padding: 0 6%;
   box-sizing: border-box;
   color: #000000;
   background-color: #ffffff;
+}
+.header:after {
+  content: "";
+  display: block;
+  clear: both;
 }
 .header ul {
   padding: 0;
@@ -89,7 +125,6 @@ p {
 }
 .top-menu li {
   display: block;
-  vertical-align: top;
   width: 20%;
   padding: 20px 0;
 }
@@ -114,7 +149,7 @@ p {
 .top-menu a {
  color: #000000;
  text-decoration: none;
- font-size: 21px;
+ font-size: 14px;
  font-weight: bold;
 }
 .top-menu a:hover {
@@ -126,10 +161,10 @@ p {
 .top-menu a:active {
   color: #766357;
 }
-.top-menu a:active:hover {
+/*.top-menu a:active:hover {
   color: #604e43;
-}
-.top-menu a:active:disabled {
+}*/
+.top-menu a:disabled {
   color: #d6d0cc;
 }
 
@@ -137,7 +172,7 @@ p {
 .intro-block {
   min-height: 513px;
   background: url("../img/background-photo.jpg") no-repeat;
-  padding-top: 1px;
+  padding-top: 75px;
   position: relative;
   z-index: 1;
 }
@@ -152,7 +187,7 @@ p {
   background: url("../img/shape.png") no-repeat center transparent;
 }
 .intro-text {
-  margin: 75px auto;
+  margin: 0 auto;
   display: block;
 }
 .heading {
@@ -164,13 +199,14 @@ p {
 }
 .heading h1 {
   width: 550px;
-  margin: 0 auto;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .heading p {
   width: 600px;
   margin: 0 auto;
-  padding-top: 30px;
 }
 
 .txt-img-block {
@@ -184,6 +220,7 @@ p {
 }
 .text-box {
   width: 33.33%;
+  padding:5%;
   min-height: 260px;
   text-align: center;
   vertical-align: middle;
@@ -191,16 +228,12 @@ p {
   box-sizing: border-box;
   background: #81b3d2;
   color: #ffffff;
-  padding: 0 15px;
 }
 .text-box .title {
-  width: 200px;
-  margin: 45px auto 0 auto;
+  padding: 0 15%;
+  margin: 0 auto;
+}
 
-}
-.text-box p {
-  margin-top: 21px;
-}
 .text-only-block {
   color: #000000;
   background: #eeeeee;
@@ -208,22 +241,16 @@ p {
 }
 .text-only-block .title {
   font-size: 21px;
-  line-height: 26px;
+  line-height: 1.2;
   font-weight: bold;
   display: block;
-  width: 180px;
+  padding: 0 25%;
   margin: 60px auto 0 auto;
-}
-.text-only-block p {
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 26px;
 }
 .text-only-block {
   min-height: 260px;
   width: 33.33%;
   text-align: center;
-  vertical-align: middle;
   box-sizing: border-box;
   padding: 0 5%;
   float: left;
@@ -238,7 +265,6 @@ p {
   content: "";
   display: table;
   clear: both;
-  width: 100%;
 }
 
 .txt-icon-block {
@@ -261,25 +287,27 @@ p {
   margin: 0 auto;
 }
 .house {
-  background: url("../img/icon-house.png") no-repeat center top 60px;
+  background: url("../img/icon-house.png") no-repeat center 60px;
 }
 .burger {
-  background: url("../img/icon-burger.png") no-repeat center top 60px;
+  background: url("../img/icon-burger.png") no-repeat center 60px;
 }
 .gift {
-  background: url("../img/icon-souvenir.png") no-repeat center top 60px;
+  background: url("../img/icon-souvenir.png") no-repeat center 60px;
 }
 
-
+.search-form-title {
+  padding-top: 60px;
+}
 .search-form-title .title {
   font-size: 30px;
   font-weight: bold;
   text-align: center;
-  margin: 60px auto 30px auto;
+  margin: 0 auto 30px auto;
 }
 .search-form-title p{
   font-size: 12px;
-  line-height: 24px;
+  line-height: 1.2;
   font-weight: normal;
   display: block;
   width: 570px;
@@ -348,7 +376,7 @@ input[type=text]:focus {
   color: #ffffff;
   font-weight: bold;
   font-size: 21px;
-  line-height: 26px;
+  line-height: 1.2;
   text-transform: uppercase;
   background-color: #81b3d2;
   margin-top: 60px;
@@ -404,7 +432,7 @@ input[type=text]:focus .frame {
   border: 2px solid #e5e5e5;
 }
 
-.icon-calendar {
+.icon-calendar::before {
   display: block;
   float: right;
   text-align: right;
@@ -523,6 +551,7 @@ input[type=text]:focus .frame {
 
 .filter-layout {
   background: #7a9ec2 url("../img/bg-filter-block.jpg") no-repeat center;
+  background-size: cover;
   padding: 50px 6%;
   min-height: 220px;
 
@@ -534,12 +563,12 @@ input[type=text]:focus .frame {
 }
 .facilities, .type {
   float:left;
-  width: 20%;
-  margin-right: 2.5%;
+  width: 190px;
 }
 .price {
   float: right;
-  width: 50%;
+  width: 230px;
+  font:
 }
 
 .filter fieldset {
@@ -560,38 +589,16 @@ input[type=text]:focus .frame {
   margin-bottom: 30px;
   margin-right: 0;
   display: block;
-  width: 20%;
-  margin-left: 30px;
+}
+.icon-check-on::before,
+.icon-check-off::before {
+  font-size: 21px;
+  margin-right: 15px;
+  vertical-align: middle;
 }
 input[type="checkbox"] {
   display: none;
 }
-input[type="checkbox"] + label {
-  display: block;
-  width: 20%
-  padding: 30px;
-  position: relative;
-}
-input[type="checkbox"] + label::before {
-  content: "/2610";
-  font-family: "symbols-sedona";
-  position: absolute;
-  font-size: 24px;
-  color: #ffffff;
-  top: 0;
-  left: 0;
-}
-
-input[type=checkbox]:checked + label::before {
-  content: "\2611";
-  font-family: "symbols-sedona";
-  position: absolute;
-  font-size: 24px;
-  color: #ffffff;
-  top: 0;
-  left: 0;
-}
-
 
 .sorting-block {
   min-height: 87px;
@@ -604,17 +611,51 @@ input[type=checkbox]:checked + label::before {
 }
 .arrows {
   float: right;
-  width: 40px;
+  width: 50px;
+  line-height: 87px;
+}
+.arrows a,
+.arrows span {
+  font-size: 16px;
+  text-decoration: none;
+}
+.icon-up-dir {
+  color: #cccccc;
+}
+.icon-down-dir {
+  color: #81b3d2;
+}
+.icon-down-dir:hover {
+  color: #000000;
 }
 .found {
   width:135px;
   margin-right: 30px;
   float: left;
+  line-height: 87px;
+  font-size: 21px;
+  font-weight: bold;
 }
 .sort-by {
   min-width: 350px;
   float: left;
+  line-height: 87px;
 }
+.sort-by a,
+.sort-by span {
+  font-size: 12px;
+  margin-right: 40px;
+}
+.sort-by a {
+  text-decoration: none;
+  color: #d6d0cc;
+  border-bottom: 1px dotted #81b3d2;
+}
+.sort-by .active {
+  color: #81b3d2;
+}
+
+
 
 .search-result {
   min-height: 150px;

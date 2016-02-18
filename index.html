@@ -112,16 +112,18 @@
               <div class="text">
                 <label for="in">Дата заезда:</label>
               </div>
-              <div class="frame icon-calendar">
-                <input id="in" type="text" name="check-in" value="24 апреля 2016">
+              <div class="frame">
+                <input id="in" type="text" name="check-in" placeholder="24 апреля 2016">
+                <button class="icon-calendar" type="button" name="date-in"></button>
               </div>
             </div>
             <div class="out">
               <div class="text">
                 <label for="out">Дата выезда:</label>
               </div>
-              <div class="frame icon-calendar">
-                <input id="out" type="text" name="check-out" value="4 июля 2016">
+              <div class="frame">
+                <input id="out" type="text" name="check-out" placeholder="4 июля 2016">
+                <button class="icon-calendar" type="button" name="date-out"></button>
               </div>
             </div>
             <div class="adults">
@@ -129,9 +131,9 @@
                   <label for="adults">Взрослые:</label>
               </div>
               <div class="frame">
-                <span class="icon-minus"></span>
+                <button class="icon-minus"></button>
                 <input id="adults" type="text" name="adults" value="2">
-                <span class="icon-plus"></span>
+                <button class="icon-plus"></button>
               </div>
             </div>
             <div class="kids">
@@ -139,9 +141,9 @@
                 <label for="kids">Дети:  </label>
               </div>
               <div class="frame">
-                <span class="icon-minus"></span>
+                <button class="icon-minus"></button>
                 <input id="kids" type="text" name="kids" value="0">
-                <span class="icon-plus"></span>
+                <button class="icon-plus"></button>
               </div>
             </div>
             <input class="index-search" type="submit" value="Найти">
@@ -159,8 +161,8 @@
           <a class="sprite sprite-icon-youtube" href="#">youtube</a>
         </div>
         <div class="copyright">
-          <span>Website by</span>
-          <a href="#"><img src="img/ha-logo.png" alt="" /></a>
+          <a class="ha-logo" href="#">htmlacademy.ru</a>
+          <div class="website-by">Website by</div>
         </div>
     </footer>
 </div>

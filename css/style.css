@@ -84,7 +84,7 @@ p {
   .icon-check-off::before { content: "\2610"; } /* "☐" */
   .icon-check-on::before { content: "\2611"; } /* "☑" */
   .icon-calendar::before { content: "\e800"; } /* "" */
-  .icon-plus::before { content: "\e801"; } /* "" */
+  .icon-plus::after { content: "\e801"; } /* "" */
   .icon-minus::before { content: "\e802"; } /* "" */
   .icon-youtube::before { content: "\f39e"; } /* "" */
 
@@ -231,6 +231,9 @@ h1,
 .text-box .title {
   padding: 0 15%;
   margin: 0 auto;
+}
+.text-box p:last-child {
+  margin-bottom: 0;
 }
 
 .text-only-block {
@@ -387,65 +390,104 @@ input[type=text]:focus {
 }
 .search-form .text {
   box-sizing: border-box;
-  width: 115px;
+  min-width: 115px;
   height:38px;
-  padding: 10px 0;
+  padding: 13px 0;
   float: left;
   background-color: #ffffff;
 }
 
 .in .frame,
 .out .frame {
-  width: 345px;
   margin-bottom: 29px;
-  background-color: #f2f2f2;
   height: 38px;
   float: left;
   box-sizing: border-box;
-  font-size: 14px;
-  font-weight: bold;
-  color: #000000;
-  padding: 13px;
+  position: relative;
 }
 .adults .frame,
 .kids .frame {
-  width: 115px;
-  background-color: #f2f2f2;
   height: 38px;
   float: left;
   box-sizing: border-box;
+  position: relative;
+}
+
+.icon-minus::before {
+  background-color: inherit;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  /*padding: 0 10px;*/
+}
+.icon-plus::after {
+  background-color: inherit;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  /*padding: 0 10px;*/
+}
+
+.in input[type="text"],
+.out input[type="text"] {
+  width: 319px;
+  padding: 13px;
+
+}
+.adults input[type="text"],
+.kids input[type="text"]{
+  min-width: 15px;
+  /*padding: 13px;*/
+  text-align: center;
+  height: 38px;
+  box-sizing: border-box;
+}
+
+input[type="text"] {
+  background-color: #f2f2f2;
   font-size: 14px;
   font-weight: bold;
   color: #000000;
-  padding: 13px 9px;
 }
-.frame:hover {
+input[type=text]:hover {
   background-color: #ebebeb;
 }
-input[type=text]:focus .frame {
+input[type=text]:focus {
   background-color: #ffffff;
-  border: 2px solid #e5e5e5;
+  box-shadow: inset 2px 2px #e5e5e5,
+              inset -2px -2px #e5e5e5;
 }
-
-.icon-calendar, .icon-plus, .icon-minus {
+.icon-calendar {
+  background-color: inherit;
+  padding:0;
+  border-style: none;
+}
+.icon-calendar::before {
+  font-size: 26px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+/*.icon-plus, .icon-minus {
   display: block;
   border-style: none;
   background-color: inherit;
   padding:0;
-}
-.icon-minus {
+}*/
+
+/*.icon-minus {
   float: left;
 }
-.icon-plus, .icon-calendar {
+.icon-plus {
   float: right;
-}
+}*/
 
-.adults input,
+/*.adults input,
 .kids input {
   max-width: 45px;
   text-align: center;
   padding: 0 5px;
-}
+}*/
 
 .kids .text {
   padding-right: 30px;
@@ -485,13 +527,6 @@ input[type=text]:focus .frame {
   clear: both;
 }
 
-/*.hashtag, .social, .copyright {
-  width: 33.33%;
-  text-align: center;
-  vertical-align: middle;
-  margin: auto 0;
-  float: left;
-}*/
 .hashtag, .social, .copyright {
   align-self: center;
   width: 33.33%;
@@ -591,24 +626,141 @@ input[type=text]:focus .frame {
   float:left;
   width: 190px;
 }
-.price {
+.filter-range {
+  width: 330px;
+  color: #ffffff;
+  text-transform: uppercase;
   float: right;
-  width: 230px;
-  font:
+}
+.filter-range-title {
+  margin-bottom: 9px;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+}
+.price-controls {
+  position: relative;
+  height: 36px;
+  margin-bottom: 20px;
+  font-size: 0;
+
+  border: 2px solid #ffffff;
+  border-radius: 2px;
 }
 
-.filter fieldset {
+.price-controls::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 22px;
+
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+}
+.price-controls label {
+  display: inline-block;
+
+  font-size: 14px;
+  line-height: 38px;
+  vertical-align: top;
+
+  cursor: pointer;
+}
+.price-controls .min-price,
+.price-controls .max-price {
+  width: 90px;
+  padding-left: 65px;
+}
+.price-controls input {
+  width: 50px;
+  margin: 0;
+
+  color: inherit;
+  font: inherit;
+
+  background: none;
+  border: none;
+  outline: none;
+}
+.range-controls {
+  position: relative;
+
+  margin-bottom: 32px;
+}
+.range-controls .scale {
+  height: 2px;
+
+  background: rgba(255, 255, 255, 0.3);
+}
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+
+  background: #ffffff;
+}
+.range-toggle {
+  width: 4px;
+  height: 4px;
+
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+  position: absolute;
+  top: -9px;
+}
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 80%;
+}
+.range-toggle:hover {
+  background: #1c4f80;
+}
+.btn-transparent {
+  display: block;
+  margin: 0 auto;
+  padding: 6px 35px;
+
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+}
+.btn-transparent:hover {
+  color: #000000;
+
+  background: #ffffff;
+}
+
+
+.facilities fieldset,
+.type fieldset {
   padding: 0;
   margin: 0;
   border: 0;
 }
-.filter legend {
+.facilities legend,
+.type legend {
   font-size: 16px;
   font-weight: bold;
   color: #ffffff;
   margin-bottom: 30px;
 }
-.filter label {
+.facilities label,
+.type label {
   font-size: 14px;
   font-weight: normal;
   color: #ffffff;
@@ -631,6 +783,8 @@ input[type="checkbox"] {
   line-height: 89px;
   padding: 0 6%;
   box-sizing: border-box;
+  border-bottom: 2px solid #e5e5e5;
+
 }
 .sorting-block::after {
   content: "";
@@ -643,10 +797,12 @@ input[type="checkbox"] {
   width: 50px;
   line-height: 87px;
 }
+/*не могу увеличить размер стрелочек*/
+
 .arrows a,
 .arrows span {
-  font-size: 16px;
   text-decoration: none;
+  font-size: 16px;
 }
 .icon-up-dir {
   color: #cccccc;
@@ -688,18 +844,90 @@ input[type="checkbox"] {
 .search-result {
   min-height: 150px;
   padding: 30px 6%;
+  border-bottom: 2px solid #e5e5e5;
 }
+/*после этого блока вылез лишний отступ снизу, не поняла откуда...*/
 .photo {
   width:135px;
   margin-right: 30px;
   float: left;
 }
 .info {
-  min-width:350px;
+  min-width: 100px;
   margin-right: 30px;
   float: left;
 }
+.hotel-name{
+  font-size: 21px;
+  font-weight: bold;
+  margin-bottom: 18px;
+  margin-top: 0;
+  line-height: 1;
+}
+.hotel-type, .hotel-price {
+  font-size: 14px;
+  display: block;
+  width: 112px;
+  margin-top: 0;
+  margin-right: 17px;
+  margin-bottom: 18px;
+  float: left;
+}
+.button-container {
+  width: 260px;
+  clear: both;
+}
+.search-result .button{
+  display: inline-block;
+  margin-right: 15px;
+  padding: 8px 17px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+}
+.details {
+  background-color: #81b3d2;
+}
+.details:hover{
+  background-color: #669ec0;
+}
+.details:disabled {
+  opacity: 30%;
+}
+.book {
+  background-color: #766357;
+}
+.book:hover{
+  background-color: #604e43;
+}
+.book:disabled{
+  opacity: 30%
+}
 .rating {
-  width:120px;
+  min-width:120px;
   float: right;
+  text-align: right;
+}
+.star-rate {
+  margin-bottom: 47px;
+}
+.icon-star {
+  color: #81b3d2;
+  font-size: 20px;
+}
+.number {
+  padding: 8px 16px;
+  background-color: #f2f2f2;
+  color: #666666;
+  font-size: 12px;
+  text-align: center;
+}
+.inner-footer {
+  width: 100%;
+  padding-bottom: 35px;
+  box-sizing: border-box;
+  font-size: 0;
+  padding-top: 35px;
+  display: flex;
 }

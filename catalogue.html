@@ -38,17 +38,21 @@
               <label class="icon-check-on">Апартаменты<input type="checkbox" name="apartments" checked></label>
             </fieldset>
           </div>
-          <div class="price">
-            <fieldset>
-              <legend>Стоимость в сутки (р)</legend>
-                <div class="price-limit">
-                  <p> от 0 </p>
-                  <p> до 3000 </p>
-                </div>
-                <div class="slider minimum">            </div>
-                <div class="slider maximum">            </div>
-                <input type="submit" value="Показать">
-              </fieldset>
+          <div class="filter-range">
+            <div class="filter-range-title">Стоимость в сутки (р)</div>
+            <div class="price-controls">
+              <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+              <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
+            </div>
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar"></div>
+              </div>
+              <div class="range-toggle range-toggle-min"></div>
+              <div class="range-toggle range-toggle-max"></div>
+
+            </div>
+            <button class="btn-transparent" type="submit">Показать</button>
           </div>
         </form>
       </div>
@@ -60,15 +64,6 @@
       </div>
       <div class="sort-by">
         <span>Сортировка:</span>
-<!-- <<<<<<< HEAD -->
-        <!-- <a href="#" class="sorting active">По цене</a>
-        <a href="#" class="sorting">По типу</a>
-        <a href="#" class="sorting">По рейтингу</a>
-      </div>
-      <div class="arrows">
-          <span class="icon-up-dir active"></span>
-          <a href="#" class="icon-down-dir"></a> -->
-<!-- ======= -->
         <a href="#" class="active">По цене</a>
         <a href="#" class="down">По типу</a>
         <a href="#" class="down">По рейтингу</a>
@@ -76,7 +71,6 @@
       <div class="arrows">
           <span class="icon-up-dir"> </span>
           <a href="#" class="icon-down-dir"> </a>
-<!-- >>>>>>> origin/master -->
       </div>
     </div>
 
@@ -94,12 +88,19 @@
         <p class="hotel-price">
           от 3500 р.
         </p>
-        <a href="#" class="button details">Подробнее</a>
-        <a href="#" class="button book">Забронировать</a>
+        <div class="button-continer">
+          <a href="#" class="button details">Подробнее</a>
+          <a href="#" class="button book">Забронировать</a>
+        </div>
       </div>
 
       <div class="rating">
-        <span class="star">&#9733 &#9733 &#9733 &#9733</span>
+        <div class="star-rate">
+          <span class="icon-star"></span>
+          <span class="icon-star"></span>
+          <span class="icon-star"></span>
+          <span class="icon-star"></span>
+        </div>
         <p class="number">
           Рейтинг: 8,5
         </p>
@@ -120,11 +121,16 @@
         <p class="hotel-price">
           от 2000 р.
         </p>
-        <a href="#" class="button details">Подробнее</a>
-        <a href="#" class="button book">Забронировать</a>
+        <div class="button-continer">
+          <a href="#" class="button details">Подробнее</a>
+          <a href="#" class="button book">Забронировать</a>
+        </div>
       </div>
       <div class="rating">
-        <span class="star">&#9733 &#9733</span>
+        <div class="star-rate">
+          <span class="icon-star"></span>
+          <span class="icon-star"></span>
+        </div>
         <p class="number">
           Рейтинг: 8,9
         </p>
@@ -145,11 +151,17 @@
         <p class="hotel-price">
           от 4000 р.
         </p>
-        <a href="#" class="button details">Подробнее</a>
-        <a href="#" class="button book">Забронировать</a>
+        <div class="button-continer">
+          <a href="#" class="button details">Подробнее</a>
+          <a href="#" class="button book">Забронировать</a>
+        </div>
       </div>
       <div class="rating">
-        <span class="star">&#9733 &#9733 &#9733</span>
+        <div class="star-rate">
+          <span class="icon-star"></span>
+          <span class="icon-star"></span>
+          <span class="icon-star"></span>
+        </div>
         <p class="number">
           Рейтинг: 9,2
         </p>
@@ -157,18 +169,18 @@
     </div>
 
     <footer class="inner-footer">
-        <div class="hashtag">
-          <p>#VISITSEDONA</p>
-        </div>
-        <div class="social">
-          <a class="sprite sprite-icon-twitter" href="#">twitter</a>
-          <a class="sprite sprite-icon-fb" href="#">facebook</a>
-          <a class="sprite sprite-icon-youtube" href="#">youtube</a>
-        </div>
-        <div class="copyright">
-          <span>Website by</span>
-          <a href="#"><img src="img/ha-logo.png" alt="" /></a>
-        </div>
+      <div class="hashtag">
+        <p>#VISITSEDONA</p>
+      </div>
+      <div class="social">
+        <a class="sprite sprite-icon-twitter" href="#">twitter</a>
+        <a class="sprite sprite-icon-fb" href="#">facebook</a>
+        <a class="sprite sprite-icon-youtube" href="#">youtube</a>
+      </div>
+      <div class="copyright">
+        <a class="ha-logo" href="#">htmlacademy.ru</a>
+        <div class="website-by">Website by</div>
+      </div>
     </footer>
   </div>
   </body>

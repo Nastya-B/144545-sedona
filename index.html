@@ -11,21 +11,20 @@
 
 <body>
   <div class="page-container">
-  <header class="header">
-    <nav class="top-menu">
-      <ul>
-        <li><a href="#">Информация</a></li>
-        <li><a href="#">Фото и видео</a></li>
-        <li><a href="#">Карта штата</a></li>
-        <li><a href="#">Гостиницы</a></li>
-      </ul>
-    </nav>
-    <a href="#"><img class="top-menu-logo" src="img/sedona-logo.png" alt="" /></a>
-  </header>
+    <header class="header">
+      <nav class="top-menu">
+        <ul>
+          <li><a href="#">Информация</a></li>
+          <li><a href="#">Фото и видео</a></li>
+          <li><a href="#">Карта штата</a></li>
+          <li><a href="catalogue.html">Гостиницы</a></li>
+        </ul>
+      </nav>
+      <a href="#"><img class="top-menu-logo" src="img/sedona-logo.png" alt="logo" height="70" width="138"></a>
+    </header>
 
     <div class="intro-block">
-      <img class="intro-text" src="img/welcome-text.png">
-    </img>
+      <img class="intro-text" src="img/welcome-text.png" alt="Welcome to Sedona!" height="352" width="458">
     </div>
     <div class="heading">
       <h1>Седона — небольшой городок в Аризоне,
@@ -37,10 +36,10 @@
       <div class="text-box">
         <p class="title">Настоящий городок</p>
         <p>&mdash;№ 1&mdash;</p>
-         <p>Седона &mdash; не аттракцион для туристов, там течет своя жизнь</p>
+        <p>Седона &mdash; не аттракцион для туристов, там течет своя жизнь</p>
       </div>
       <div class="benefit-img">
-        <img src="img/city-view.jpg" alt="вид Седоны" />
+        <img src="img/city-view.jpg" alt="вид Седоны" height="401" width="800" />
       </div>
     </div>
 
@@ -48,7 +47,7 @@
       <p class="title">
         Жилье
       </p>
-       <p>
+      <p>
         Рекомендуем пожить в настоящем мотеле, все как в кино!
       </p>
     </div>
@@ -57,7 +56,7 @@
       <p class="title">
         Еда
       </p>
-       <p>
+      <p>
         Всегда заказывайте фирменный бургер, вы не разочаруетесь!
       </p>
     </div>
@@ -66,96 +65,96 @@
       <p class="title">
         Сувениры
       </p>
-       <p>
+      <p>
         Не только китайского, но и местного производства!
       </p>
     </div>
 
     <div class="txt-img-block">
       <div class="benefit-img">
-        <img src="img/devils-bridge.jpg" alt="Мост Дьявола" />
+        <img src="img/devils-bridge.jpg" alt="Мост Дьявола" height="400" width="800" />
       </div>
       <div class="text-box">
         <p class="title">Там есть мост дьявола</p>
-         <p>&mdash;№ 2&mdash;</p>
-         <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+        <p>&mdash;№ 2&mdash;</p>
+        <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
       </div>
     </div>
-    <div class="container">
-      <div class="text-only-block">
-        <p class="title">Небольшая площадь</p>
-         <p>&mdash;№ 3&mdash;</p>
-         <p>Все достопримечательности находятся очень близко</p>
-      </div>
-      <div class="text-only-block">
-        <p class="title">Красивая дорога</p>
-         <p>&mdash;№ 4&mdash;</p>
-         <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-      </div>
-      <div class="text-only-block">
+    <div class="text-only-block">
+      <p class="title">Небольшая площадь</p>
+      <p>&mdash;№ 3&mdash;</p>
+      <p>Все достопримечательности находятся очень близко</p>
+    </div>
+    <div class="text-only-block">
+      <p class="title">Красивая дорога</p>
+      <p>&mdash;№ 4&mdash;</p>
+      <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+    </div>
+    <div class="text-only-block">
       <p class="title">Мало туристов</p>
-       <p>&mdash;№ 5&mdash;</p>
-       <p>Большинство едет в Гранд Каньон и толпится там</p>
-      </div>
+      <p>&mdash;№ 5&mdash;</p>
+      <p>Большинство едет в Гранд Каньон и толпится там</p>
     </div>
 
 
-      <div class="search-form-title">
-          <p class="title">Заинтересовались?</p>
-          <p>Укажите предполагаемые даты поездки,
-            и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-          <a class="search-button" href="#">Поиск отелей в Седоне</a>
+    <div class="search-form-title">
+      <p class="title">Заинтересовались?</p>
+      <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+      <a class="search-button js-open-form" href="#">Поиск отелей в Седоне</a>
+    </div>
+    <div class="search-form-layout">
+      <div id="yandex-map">
       </div>
-      <div class="search-form-layout">
-          <form class="search-form clearfix" action="#" method="get">
-            <div class="date">
-               <label for="date-in">Дата заезда:</label>
-               <input type="date" name="date-in" id="date-in" value="2015-04-22">
-               <div class="icon-calendar"></div>
-             </div>
-             <div class="date">
-               <label for="date-out">Дата выезда:</label>
-               <input type="date" name="date-out" id="date-out" value="2015-06-04">
-               <div class="icon-calendar"></div>
-             </div>
-             <div class="person-amount clearfix">
-               <div class="person-column">
-                 <label for="adult" class="person-label">Взрослые:</label>
-                 <div class="person-group-input">
-                   <button class="icon-minus"></button>
-                   <input type="number" name="adult" id="adult" value="2" min="0">
-                   <button class="icon-plus"></button>
-                 </div>
-               </div>
-               <div class="person-column">
-                 <label for="kids" class="person-label kids-title">Дети:</label>
-                 <div class="person-group-input">
-                   <button class="icon-minus"></button>
-                   <input type="number" name="kids" id="kids" value="0" min="0">
-                   <button class="icon-plus"></button>
-                 </div>
-               </div>
-             </div>
-            <input class="index-search" type="submit" value="Найти">
-          </form>
-      </div>
-
-
+      <form class="search-form clearfix" action="#" method="get">
+        <div class="date">
+          <label for="date-in">Дата заезда:</label>
+          <input type="date" name="date-in" id="date-in" value="2015-04-22">
+          <div class="icon-calendar"></div>
+        </div>
+        <div class="date">
+          <label for="date-out">Дата выезда:</label>
+          <input type="date" name="date-out" id="date-out" value="2015-06-04">
+          <div class="icon-calendar"></div>
+        </div>
+        <div class="person-amount clearfix">
+          <div class="person-column">
+            <label for="adult" class="person-label">Взрослые:</label>
+            <div class="person-group-input">
+              <button class="icon-minus" type="button"></button>
+              <input type="number" name="adult" id="adult" value="2" min="0">
+              <button class="icon-plus" type="button"></button>
+            </div>
+          </div>
+          <div class="person-column">
+            <label for="kids" class="person-label kids-title">Дети:</label>
+            <div class="person-group-input">
+              <button class="icon-minus" type="button"></button>
+              <input type="number" name="kids" id="kids" value="0" min="0">
+              <button class="icon-plus" type="button"></button>
+            </div>
+          </div>
+        </div>
+        <input class="index-search" type="submit" value="Найти">
+      </form>
+    </div>
     <footer class="main-footer">
-        <div class="hashtag">
-          <p>#VISITSEDONA</p>
-        </div>
-        <div class="social">
-          <a class="sprite sprite-icon-twitter" href="#">twitter</a>
-          <a class="sprite sprite-icon-fb" href="#">facebook</a>
-          <a class="sprite sprite-icon-youtube" href="#">youtube</a>
-        </div>
-        <div class="copyright">
-          <a class="ha-logo" href="#">htmlacademy.ru</a>
-          <div class="website-by">Website by</div>
-        </div>
+      <div class="hashtag">
+        <p>#VISITSEDONA</p>
+      </div>
+      <div class="social">
+        <a class="sprite sprite-icon-twitter" href="#">twitter</a>
+        <a class="sprite sprite-icon-fb" href="#">facebook</a>
+        <a class="sprite sprite-icon-youtube" href="#">youtube</a>
+      </div>
+      <div class="copyright">
+        <a class="ha-logo" href="#">htmlacademy.ru</a>
+        <div class="website-by">Website by</div>
+      </div>
     </footer>
-</div>
+  </div>
+
+  <script src="js/script.js"></script>
+
 </body>
 
 </html>

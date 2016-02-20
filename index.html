@@ -107,39 +107,35 @@
           <a class="search-button" href="#">Поиск отелей в Седоне</a>
       </div>
       <div class="search-form-layout">
-          <form class="search-form" action="#" method="get">
-            <div class="in">
-              <div class="text">
-                <label for="in">Дата заезда:</label>
-              </div>
-              <div class="frame icon-calendar">
-                <input id="in" type="text" name="check-in" placeholder="24 апреля 2016">
-              </div>
-            </div>
-            <div class="out">
-              <div class="text">
-                <label for="out">Дата выезда:</label>
-              </div>
-              <div class="frame icon-calendar">
-                <input id="out" type="text" name="check-out" placeholder="4 июля 2016">
-              </div>
-            </div>
-            <div class="adults">
-              <div class="text">
-                  <label for="adults">Взрослые:</label>
-              </div>
-              <div class="frame icon-minus icon-plus">
-                <input id="adults" type="text" name="adults" value="2">
-              </div>
-            </div>
-            <div class="kids">
-              <div class="text">
-                <label for="kids">Дети:  </label>
-              </div>
-              <div class="frame icon-minus icon-plus">
-                <input id="kids" type="text" name="kids" value="0">
-              </div>
-            </div>
+          <form class="search-form clearfix" action="#" method="get">
+            <div class="date">
+               <label for="date-in">Дата заезда:</label>
+               <input type="date" name="date-in" id="date-in" value="2015-04-22">
+               <div class="icon-calendar"></div>
+             </div>
+             <div class="date">
+               <label for="date-out">Дата выезда:</label>
+               <input type="date" name="date-out" id="date-out" value="2015-06-04">
+               <div class="icon-calendar"></div>
+             </div>
+             <div class="person-amount clearfix">
+               <div class="person-column">
+                 <label for="adult" class="person-label">Взрослые:</label>
+                 <div class="person-group-input">
+                   <button class="icon-minus"></button>
+                   <input type="number" name="adult" id="adult" value="2" min="0">
+                   <button class="icon-plus"></button>
+                 </div>
+               </div>
+               <div class="person-column">
+                 <label for="kids" class="person-label kids-title">Дети:</label>
+                 <div class="person-group-input">
+                   <button class="icon-minus"></button>
+                   <input type="number" name="kids" id="kids" value="0" min="0">
+                   <button class="icon-plus"></button>
+                 </div>
+               </div>
+             </div>
             <input class="index-search" type="submit" value="Найти">
           </form>
       </div>

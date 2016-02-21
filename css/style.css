@@ -159,7 +159,7 @@ p {
   background-color: #ffffff;
   box-shadow: 0 0 15px 15px #e9e9e9;
 }
-h1, .title {
+.title {
   font-size: 21px;
   line-height: 1.2;
   font-weight: bold;
@@ -170,8 +170,9 @@ h1, .title {
   box-sizing: border-box;
   color: #000000;
   background-color: #ffffff;
+  position: relative;
 }
-.header:after {
+.clearfix:after {
   content: "";
   display: block;
   clear: both;
@@ -198,6 +199,7 @@ h1, .title {
   position: absolute;
   left: 0;
   right: 0;
+  top: 0;
   margin-left: auto;
   margin-right: auto;
   z-index: 2;
@@ -262,13 +264,8 @@ h1, .title {
   box-sizing: border-box;
   min-height: 260px;
 }
-.txt-img-block::after {
-  content: "";
-  display: table;
-  clear: both;
-}
 .text-box {
-  width: 33.33%;
+  width: 33.33333%;
   padding: 5%;
   min-height: 260px;
   text-align: center;
@@ -288,7 +285,7 @@ h1, .title {
   color: #000000;
   background: #eeeeee;
   text-align: center;
-  margin-bottom: 60px;
+  /*margin-bottom: 60px;*/
 }
 .text-only-block .title {
   font-size: 21px;
@@ -300,7 +297,7 @@ h1, .title {
 }
 .text-only-block {
   min-height: 260px;
-  width: 33.33%;
+  width: 33.33333%;
   text-align: center;
   box-sizing: border-box;
   padding: 0 5%;
@@ -308,23 +305,23 @@ h1, .title {
 }
 .benefit-img {
   height: 260px;
-  width: 66.66%;
+  width: 66.66666%;
   overflow: hidden;
   float: left;
 }
-.txt-icon-block {
+.txt-icon div {
   min-height: 330px;
-  width: 33.33%;
+  width: 33.33333%;
   text-align: center;
   box-sizing: border-box;
   float: left;
   padding-top: 150px;
 }
-.txt-icon-block .title {
+.txt-icon .title {
   width: 180px;
   margin: 30px auto;
 }
-.txt-icon-block p {
+.txt-icon p {
   width: 300px;
   margin: 0 auto;
 }
@@ -401,11 +398,7 @@ h1, .title {
   animation-name: fly;
   animation-duration: 1s;
 }
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+
 .date {
   margin-bottom: 20px;
   font-size: 0;
@@ -426,7 +419,27 @@ h1, .title {
   box-sizing: border-box;
   border: 0;
   background-color: #f2f2f2;
+  position: relative;
 }
+
+.icon-calendar::before {
+  font-size: 24px;
+  margin: 0;
+  height: 24px;
+  width: 24px;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  background-color: inherit;
+  color: #a9a9a9;
+}
+.icon-calendar:hover {
+  color: #000000;
+}
+.icon-calendar:disabled {
+  color: #81b3d2;
+}
+
 .date input:hover {
   background-color: #ebebeb;
 }
@@ -507,25 +520,7 @@ h1, .title {
   text-align: right;
   padding-right: 30px;
 }
-.icon-calendar {
-  height: 24px;
-  width: 24px;
-  position: absolute;
-  right: 15px;
-  top: 10px;
-  background-color: inherit;
-  color: #a9a9a9;
-}
-.icon-calendar::before {
-  font-size: 24px;
-  margin: 0;
-}
-.icon-calendar:hover {
-  color: #000000;
-}
-.icon-calendar:disabled {
-  color: #81b3d2;
-}
+
 .index-search {
   width: 470px;
   height: 60px;
@@ -546,57 +541,51 @@ h1, .title {
 }
 .main-footer {
   width: 100%;
-  padding-bottom: 35px;
+  display: inline-block;
+  padding: 35px 0;
   box-sizing: border-box;
   font-size: 0;
-  padding-top: 35px;
   position: absolute;
   bottom: 0px;
   background: rgba(255, 255, 255, 0.9);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
 }
-.main-footer::after {
-  content: "";
-  display: block;
-  ;
-  clear: both;
-}
+
 .hashtag, .social, .copyright {
-  align-self: center;
-  width: 33.33%;
-  padding-left: 15px;
-  padding-right: 15px;
+  width: 33.33333%;
+  display: inline-block;
+  padding: 0 15px;
   text-align: center;
+  vertical-align: middle;
+  box-sizing: border-box;
 }
 .hashtag p {
   font-size: 21px;
   font-weight: bold;
 }
-.website-by {
-  float: right;
-  width: 80px;
+.copyright p {
+  display: inline-block;
+  vertical-align: middle;
+  /*width: 80px;
   height: 38px;
   margin-right: 10px;
   padding: 12px 0;
   font-size: 14px;
-  line-height: 38px;
+  line-height: 38px;*/
 }
 .ha-logo {
-  display: block;
+  display: inline-block;
+  vertical-align: middle;
   width: 113px;
   height: 39px;
-  float: right;
-  margin-top: 10px;
-  background: url(../img/ha-logo.png) no-repeat;
+  background: url("../img/ha-logo.png") no-repeat center;
+  text-indent: 100%;
+  overflow: hidden;
 }
 .ha-logo:hover {
-  background-image: url(../img/logo-hover.png);
+  background-image: url("../img/logo-hover.png");
 }
 .ha-logo:disabled {
-  background-image: url(../img/logo-down.png);
+  background-image: url("../img/logo-down.png");
 }
 .social a {
   display: inline-block;
@@ -647,16 +636,42 @@ h1, .title {
   background-size: cover;
   padding: 50px 6%;
   min-height: 220px;
+  box-sizing: border-box;
 }
-.filter-layout::after {
-  content: "";
-  display: table;
-  clear: both;
-}
+
 .facilities, .type {
   float: left;
-  width: 190px;
+  width: 25%;
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
+.facilities legend, .type legend {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+}
+.facilities label, .type label {
+  font-size: 14px;
+  line-height: 1;
+  font-weight: normal;
+  color: #ffffff;
+  margin-top: 35px;
+  /*margin-right: 0;*/
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+input[type="checkbox"] {
+  display: none;
+}
+.icon-check-on::before, .icon-check-off::before {
+  font-size: 21px;
+  margin-right: 15px;
+  vertical-align: middle;
+}
+
+
 .filter-range {
   width: 330px;
   color: #ffffff;
@@ -758,33 +773,6 @@ h1, .title {
   color: #000000;
   background: #ffffff;
 }
-.facilities fieldset, .type fieldset {
-  padding: 0;
-  margin: 0;
-  border: 0;
-}
-.facilities legend, .type legend {
-  font-size: 16px;
-  font-weight: bold;
-  color: #ffffff;
-  margin-bottom: 30px;
-}
-.facilities label, .type label {
-  font-size: 14px;
-  font-weight: normal;
-  color: #ffffff;
-  margin-bottom: 30px;
-  margin-right: 0;
-  display: block;
-}
-.icon-check-on::before, .icon-check-off::before {
-  font-size: 21px;
-  margin-right: 15px;
-  vertical-align: middle;
-}
-input[type="checkbox"] {
-  display: none;
-}
 .sorting-block {
   min-height: 89px;
   line-height: 89px;
@@ -793,28 +781,31 @@ input[type="checkbox"] {
   border-bottom: 2px solid #e5e5e5;
 }
 .sorting-block::after {
-  content: "";
-  display: block;
-  clear: both;
   font-size: 0;
 }
 .arrows {
   float: right;
-  width: 50px;
+  width: 60px;
   line-height: 87px;
+  position: relative;
 }
 .arrows a, .arrows span {
   text-decoration: none;
-  font-size: 16px;
+  font-size: 0;
 }
-.icon-up-dir {
+.icon-up-dir::before {
   color: #cccccc;
+  font-size: 20px;
+  position: relative;
+  left: 15px;
 }
-.icon-down-dir {
+.icon-down-dir::before {
   color: #81b3d2;
+  font-size: 20px;
 }
-.icon-down-dir:hover {
+.icon-down-dir:hover::before {
   color: #000000;
+  font-size: 20px;
 }
 .found {
   width: 135px;
@@ -840,11 +831,20 @@ input[type="checkbox"] {
 }
 .sort-by .active {
   color: #81b3d2;
+  border-bottom: none;
+}
+.sort-by .down:hover {
+  color: #81b3d2;
+}
+.sort-by .down:disabled {
+  color: #000000;
+  border-bottom: none;
 }
 .search-result {
   min-height: 150px;
   padding: 30px 6%;
   border-bottom: 2px solid #e5e5e5;
+  box-sizing: border-box;
 }
 .photo {
   width: 135px;
@@ -852,11 +852,11 @@ input[type="checkbox"] {
   float: left;
 }
 .info {
-  min-width: 100px;
   margin-right: 30px;
   float: left;
 }
 .hotel-name {
+  clear: both;
   font-size: 21px;
   font-weight: bold;
   margin-bottom: 18px;
@@ -870,14 +870,21 @@ input[type="checkbox"] {
 .hotel-name:disabled {
   color: #b2b2b2;
 }
-.hotel-type, .hotel-price {
-  font-size: 14px;
-  display: block;
-  width: 112px;
-  margin-top: 0;
-  margin-right: 17px;
+.type-n-price {
+  clear: both;
   margin-bottom: 18px;
   float: left;
+}
+.type-n-price span {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 14px;
+}
+.left-col {
+  width: 110px;
+}
+.right-col {
+  width: 145px;
 }
 .button-container {
   width: 260px;
@@ -891,9 +898,11 @@ input[type="checkbox"] {
   font-weight: bold;
   color: #ffffff;
   text-decoration: none;
+  box-sizing: border-box;
 }
 .details {
   background-color: #81b3d2;
+  width: 110px;
 }
 .details:hover {
   background-color: #669ec0;
@@ -903,6 +912,7 @@ input[type="checkbox"] {
 }
 .book {
   background-color: #766357;
+  width: 145px;
 }
 .book:hover {
   background-color: #604e43;
@@ -919,6 +929,9 @@ input[type="checkbox"] {
   margin-bottom: 47px;
 }
 .icon-star {
+  font-size: 0px;
+}
+.icon-star::before {
   color: #81b3d2;
   font-size: 20px;
 }
@@ -931,12 +944,8 @@ input[type="checkbox"] {
 }
 .inner-footer {
   width: 100%;
-  padding-bottom: 35px;
+  display: inline-block;
+  padding: 35px 0;
   box-sizing: border-box;
   font-size: 0;
-  padding-top: 35px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
 }

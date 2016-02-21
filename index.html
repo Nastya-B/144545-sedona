@@ -13,7 +13,7 @@
   <div class="page-container">
     <header class="header">
       <nav class="top-menu">
-        <ul>
+        <ul class="clearfix">
           <li><a href="#">Информация</a></li>
           <li><a href="#">Фото и видео</a></li>
           <li><a href="#">Карта штата</a></li>
@@ -32,7 +32,7 @@
       <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
     </div>
 
-    <div class="txt-img-block">
+    <div class="txt-img-block clearfix">
       <div class="text-box">
         <p class="title">Настоящий городок</p>
         <p>&mdash;№ 1&mdash;</p>
@@ -42,35 +42,33 @@
         <img src="img/city-view.jpg" alt="вид Седоны" height="401" width="800" />
       </div>
     </div>
-
-    <div class="txt-icon-block house">
-      <p class="title">
-        Жилье
-      </p>
-      <p>
-        Рекомендуем пожить в настоящем мотеле, все как в кино!
-      </p>
+    <div class="txt-icon clearfix">
+      <div class="house">
+        <p class="title">
+          Жилье
+        </p>
+        <p>
+          Рекомендуем пожить в настоящем мотеле, все как в кино!
+        </p>
+      </div>
+      <div class="burger">
+        <p class="title">
+          Еда
+        </p>
+        <p>
+          Всегда заказывайте фирменный бургер, вы не разочаруетесь!
+        </p>
+      </div>
+      <div class="gift">
+        <p class="title">
+          Сувениры
+        </p>
+        <p>
+          Не только китайского, но и местного производства!
+        </p>
+      </div>
     </div>
-
-    <div class="txt-icon-block burger">
-      <p class="title">
-        Еда
-      </p>
-      <p>
-        Всегда заказывайте фирменный бургер, вы не разочаруетесь!
-      </p>
-    </div>
-
-    <div class="txt-icon-block gift">
-      <p class="title">
-        Сувениры
-      </p>
-      <p>
-        Не только китайского, но и местного производства!
-      </p>
-    </div>
-
-    <div class="txt-img-block">
+    <div class="txt-img-block clearfix">
       <div class="benefit-img">
         <img src="img/devils-bridge.jpg" alt="Мост Дьявола" height="400" width="800" />
       </div>
@@ -80,41 +78,39 @@
         <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
       </div>
     </div>
-    <div class="text-only-block">
-      <p class="title">Небольшая площадь</p>
-      <p>&mdash;№ 3&mdash;</p>
-      <p>Все достопримечательности находятся очень близко</p>
+    <div class="txt-only-row clearfix">
+      <div class="text-only-block">
+        <p class="title">Небольшая площадь</p>
+        <p>&mdash;№ 3&mdash;</p>
+        <p>Все достопримечательности находятся очень близко</p>
+      </div>
+      <div class="text-only-block">
+        <p class="title">Красивая дорога</p>
+        <p>&mdash;№ 4&mdash;</p>
+        <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+      </div>
+      <div class="text-only-block">
+        <p class="title">Мало туристов</p>
+        <p>&mdash;№ 5&mdash;</p>
+        <p>Большинство едет в Гранд Каньон и толпится там</p>
+      </div>
     </div>
-    <div class="text-only-block">
-      <p class="title">Красивая дорога</p>
-      <p>&mdash;№ 4&mdash;</p>
-      <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-    </div>
-    <div class="text-only-block">
-      <p class="title">Мало туристов</p>
-      <p>&mdash;№ 5&mdash;</p>
-      <p>Большинство едет в Гранд Каньон и толпится там</p>
-    </div>
-
-
-    <div class="search-form-title">
+    <div class="search-form-title clearfix">
       <p class="title">Заинтересовались?</p>
       <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
       <a class="search-button js-open-form" href="#">Поиск отелей в Седоне</a>
     </div>
     <div class="search-form-layout">
-      <div id="yandex-map">
-      </div>
+      <!-- <div id="yandex-map">
+      </div> -->
       <form class="search-form clearfix" action="#" method="get">
         <div class="date">
           <label for="date-in">Дата заезда:</label>
-          <input type="date" name="date-in" id="date-in" value="2015-04-22">
-          <div class="icon-calendar"></div>
+          <input class="icon-calendar" type="date" name="date-in" id="date-in" value="2015-04-22">
         </div>
         <div class="date">
           <label for="date-out">Дата выезда:</label>
-          <input type="date" name="date-out" id="date-out" value="2015-06-04">
-          <div class="icon-calendar"></div>
+          <input class="icon-calendar" type="date" name="date-out" id="date-out" value="2015-06-04">
         </div>
         <div class="person-amount clearfix">
           <div class="person-column">
@@ -137,7 +133,7 @@
         <input class="index-search" type="submit" value="Найти">
       </form>
     </div>
-    <footer class="main-footer">
+    <footer class="main-footer clearfix">
       <div class="hashtag">
         <p>#VISITSEDONA</p>
       </div>
@@ -147,8 +143,7 @@
         <a class="sprite sprite-icon-youtube" href="#">youtube</a>
       </div>
       <div class="copyright">
-        <a class="ha-logo" href="#">htmlacademy.ru</a>
-        <div class="website-by">Website by</div>
+        <p>Website By <a class="ha-logo" href="#">htmlacademy</a></p>
       </div>
     </footer>
   </div>

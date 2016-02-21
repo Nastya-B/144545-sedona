@@ -362,8 +362,7 @@ p {
 .search-form-layout {
   min-height: 595px;
   background: #cbdda9 url("../img/map.jpg");
-  position: absolute;
-  bottom: 0;
+  position: relative;
   z-index: 1;
 }
 .google-map {
@@ -382,6 +381,7 @@ p {
   padding: 50px;
   box-sizing: border-box;
   position: relative;
+  z-index: 3;
   box-shadow: 10px 15px 10px -5px rgba(0, 0, 0, 0.1), -10px 15px 10px -5px rgba(0, 0, 0, 0.1);
 }
 @keyframes fly {
@@ -547,6 +547,7 @@ p {
   box-sizing: border-box;
   font-size: 0;
   position: absolute;
+  z-index: 3;
   bottom: 0px;
   background: rgba(255, 255, 255, 0.9);
 }

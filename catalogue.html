@@ -16,8 +16,8 @@
         <ul class="clearfix">
           <li><a href="index.html">Информация</a></li>
           <li><a href="#">Фото и видео</a></li>
-          <li><a href="#">Карта штата</a></li>
           <li><a href="#">Гостиницы</a></li>
+          <li><a href="#">Карта штата</a></li>
         </ul>
       </nav>
       <a href="#"><img class="top-menu-logo" src="img/sedona-logo.png" alt="logo" height="70" width="138" /></a>
@@ -26,27 +26,29 @@
       <form class="filter" name="filter" action="index.html">
           <fieldset class="facilities">
             <legend>Инфраструктура:</legend>
-            <label class="icon-check-on">Бассейн
-              <input type="checkbox" name="pool" checked>
-            </label>
-            <label class="icon-check-on">Парковка
-              <input type="checkbox" name="parking">
-            </label>
-            <label class="icon-check-on">Wi-Fi
-              <input type="checkbox" name="wifi">
-            </label>
+              <input id="ch1" type="checkbox" name="pool" checked>
+              <label for="ch1">Бассейн</label>
+
+              <input id="ch2" type="checkbox" name="parking">
+              <label for="ch2">Парковка</label>
+
+              <input id="ch3" type="checkbox" name="wifi">
+              <label for="ch3">Wi-Fi</label>
+
           </fieldset>
           <fieldset class="type">
             <legend>Тип жилья:</legend>
-            <label class="icon-check-off">Гостиница
-              <input type="checkbox" name="hotel" checked>
-            </label>
-            <label class="icon-check-on">Мотель
-              <input type="checkbox" name="motel" checked>
-            </label>
-            <label class="icon-check-on">Апартаменты
-              <input type="checkbox" name="apartments" checked>
-            </label>
+              <input id="ch4" type="checkbox" name="hotel" checked>
+              <label for="ch4">Гостиница</label>
+
+              <input id="ch5" type="checkbox" name="motel" checked>
+              <label for="ch5">Мотель</label>
+
+              <input id="ch6" type="checkbox" name="apartments" checked>
+              <label for="ch6">Апартаменты</label>
+
+
+
           </fieldset>
         <div class="filter-range">
           <div class="filter-range-title">Стоимость в сутки (р)</div>

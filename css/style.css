@@ -69,22 +69,6 @@ p {
   speak: none;
 }
 
-/*[class^="icon-"]::after, [class*=" icon-"]::after {
-  display: inline-block;
-  width: 1em;
-  margin-right: 0.2em;
-  margin-left: 0.2em;
-  font-weight: normal;
-  line-height: 1em;
-  font-family: "symbols-sedona";
-  text-align: center;
-  text-transform: none;
-  text-decoration: inherit;
-  font-style: normal;
-  font-variant: normal;
-  speak: none;
-}*/
-
 .icon-facebook::before {
   content: "\66";
 }
@@ -223,7 +207,8 @@ p {
   color: #d6d0cc;
 }
 .intro-block {
-  min-height: 513px;
+  min-height: 510px;
+  box-sizing: border-box;
   background: #2c3b39 url("../img/background-photo.jpg") no-repeat;
   padding-top: 75px;
   position: relative;
@@ -238,13 +223,14 @@ p {
   width: 100%;
   height: 57px;
   background: url("../img/shape.png") no-repeat center transparent;
+  background-size: cover;
 }
 .intro-text {
   margin: 0 auto;
   display: block;
 }
 .heading {
-  min-height: 200px;
+  /*min-height: 200px;*/
   text-align: center;
   width: 100%;
   padding: 57px 0;
@@ -252,6 +238,7 @@ p {
 }
 .heading h1 {
   width: 550px;
+  line-height: 1;
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
@@ -280,20 +267,22 @@ p {
 }
 .text-box p:last-child {
   margin-bottom: 0;
+  line-height: 1.3;
 }
 .text-only-block {
   color: #000000;
   background: #eeeeee;
   text-align: center;
+  box-sizing: border-box;
   /*margin-bottom: 60px;*/
 }
 .text-only-block .title {
   font-size: 21px;
-  line-height: 1.2;
+  line-height: 1;
   font-weight: bold;
   display: block;
   padding: 0 25%;
-  margin: 60px auto 0 auto;
+  margin: 50px auto 0 auto;
 }
 .text-only-block {
   min-height: 260px;
@@ -315,11 +304,12 @@ p {
   text-align: center;
   box-sizing: border-box;
   float: left;
-  padding-top: 150px;
+  padding-top: 130px;
 }
 .txt-icon .title {
   width: 180px;
   margin: 30px auto;
+  line-height: 1;
 }
 .txt-icon p {
   width: 300px;
@@ -335,13 +325,13 @@ p {
   background: url("../img/icon-souvenir.png") no-repeat center 60px;
 }
 .search-form-title {
-  padding-top: 60px;
+  padding-top: 58px;
 }
 .search-form-title .title {
   font-size: 30px;
   font-weight: bold;
   text-align: center;
-  margin: 0 auto 30px auto;
+  margin: 0 auto 26px auto;
 }
 .search-form-title p {
   font-size: 12px;
@@ -372,7 +362,16 @@ p {
 .search-form-layout {
   min-height: 595px;
   background: #cbdda9 url("../img/map.jpg");
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+.google-map {
+  width: 100%;
+  height: 595px;
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
 }
 .search-form {
   display: none;
@@ -420,6 +419,7 @@ p {
   border: 0;
   background-color: #f2f2f2;
   position: relative;
+  z-index: 1;
 }
 
 .icon-calendar::before {
@@ -428,6 +428,7 @@ p {
   height: 24px;
   width: 24px;
   position: absolute;
+  z-index: 2;
   right: 15px;
   top: 10px;
   background-color: inherit;
@@ -565,12 +566,6 @@ p {
 .copyright p {
   display: inline-block;
   vertical-align: middle;
-  /*width: 80px;
-  height: 38px;
-  margin-right: 10px;
-  padding: 12px 0;
-  font-size: 14px;
-  line-height: 38px;*/
 }
 .ha-logo {
   display: inline-block;
@@ -650,27 +645,41 @@ p {
   font-size: 16px;
   font-weight: bold;
   color: #ffffff;
+  margin-bottom: 31px;
 }
 .facilities label, .type label {
-  font-size: 14px;
-  line-height: 1;
-  font-weight: normal;
-  color: #ffffff;
-  margin-top: 35px;
-  /*margin-right: 0;*/
-  display: block;
-  position: relative;
-  cursor: pointer;
 }
 input[type="checkbox"] {
   display: none;
 }
-.icon-check-on::before, .icon-check-off::before {
-  font-size: 21px;
-  margin-right: 15px;
-  vertical-align: middle;
+
+input[type="checkbox"] + label {
+  font-size: 14px;
+  line-height: 1;
+  font-weight: normal;
+  color: #ffffff;
+  display: block;
+  margin-bottom: 31px;
+  padding-left: 40px;
+
+  position: relative;
+  cursor: pointer;
+}
+input[type="checkbox"] + label::before {
+content: "\2610";
+font-family: "symbols-sedona";
+position: absolute;
+top: -5px;
+left: 0;
+width: 16px;
+height: 16px;
+font-size: 26px;
 }
 
+input[type="checkbox"]:checked + label::before {
+  content: "\2611";
+  font-family: "symbols-sedona";
+}
 
 .filter-range {
   width: 330px;

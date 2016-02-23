@@ -257,11 +257,11 @@ img {
 }
 .txt-img-block {
   box-sizing: border-box;
-  min-height: 256px;
+  background-color: #81b3d2;
 }
 .text-box {
   width: 33.33333%;
-  padding: 5%;
+  padding: 4.5%;
   min-height: 256px;
   text-align: center;
   float: left;
